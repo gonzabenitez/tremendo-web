@@ -1,0 +1,19 @@
+<svg class="bot w-48 h-48" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Head -->
+  <rect class="bot-head" x="40" y="50" width="120" height="100" rx="20" ry="20" fill="#7E22CE" stroke="black" stroke-width="4"/>
+  
+  <!-- Antenna -->
+  <line class="bot-antenna" x1="100" y1="20" x2="100" y2="50" stroke="black" stroke-width="3"/>
+  <circle class="bot-antenna-tip" cx="100" cy="20" r="8" fill="#A3E635" stroke="black" stroke-width="3"/>
+  
+  <!-- Ears -->
+  <rect class="bot-ear-left" x="25" y="70" width="15" height="60" rx="5" ry="5" fill="#22C55E"/>
+  <rect class="bot-ear-right" x="160" y="70" width="15" height="60" rx="5" ry="5" fill="#EAB308"/>
+  
+  <!-- Eyes -->
+  <circle class="bot-eye eye-left" cx="75" cy="90" r="6" fill="black"/>
+  <circle class="bot-eye eye-right" cx="125" cy="90" r="6" fill="black"/>
+  
+  <!-- Mouth -->
+  <path class="bot-mouth" d="M75 120 Q100 140 125 120" stroke="black" stroke-width="3" fill="transparent"/>
+</svg>
