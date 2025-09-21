@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tremendo - AI Business Automations</title>
+  <meta name="description" content="Automate workflows, cut costs, and grow faster with AI-powered automations by Tremendo."/>
+  <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet"/>
+<style>
+ 
+:root{
+  --trem-blue: #4c51bf;
+  --trem-purple: #805ad5;
+  --trem-yellow: #f6e05e;
+  --trem-green: #48bb78;
+  --frame: #0b0b0b;
+}
+  body { font-family: 'Space Grotesk', sans-serif; }
+  .gradient { background: linear-gradient(90deg, #4c51bf 0%, #805ad5 100%); }
+  .gradient-text { background: linear-gradient(90deg, #f6e05e, #48bb78); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+
+  /* Fix navbar overlay */
+  nav {
+    background: rgba(17, 17, 17, 0.9); /* dark transparent */
+    backdrop-filter: blur(6px);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    animation: slideDown 0.6s ease-out;
+  }
+
+  /* Fix hero spacing */
+  .hero {
+    padding-bottom: 5rem;
+  }
+
+  /* Animations */
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes slideDown {
+    from { transform: translateY(-100%); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+   @keyframes blink {
+  0%, 90%, 100% { transform: scaleY(1); }
+  95% { transform: scaleY(0.1); }
+  }
+
+ .bot-eye {
+  transform-origin: center;
+  animation: blink 4s infinite;
+ }
+
+/* Eye wandering */
+@keyframes eyeMove {
+  0%, 100% { transform: translate(0, 0); }
+  25% { transform: translate(2px, 0); }
+  50% { transform: translate(-2px, 0); }
+  75% { transform: translate(0, 1px); }
+}
+
+.eye-left, .eye-right {
+  animation: blink 4s infinite, eyeMove 6s infinite;
+}
+
+
+  .fade-in-up {
+    opacity: 0;
+    animation: fadeInUp 1s forwards;
+  }
+  .fade-delay-1 { animation-delay: 0.2s; }
+  .fade-delay-2 { animation-delay: 0.4s; }
+  .fade-delay-3 { animation-delay: 0.6s; }
+
+
+/* wrapper sizing */
+.bot-wrap { width: 360px; max-width: 80%; margin: 0 auto; }
+.bot-svg { display:block; width:100%; height:auto; }
+
+/* enable transforms on svg elements consistently (include webkit for Safari) */
+.bot-svg * { transform-box: fill-box; -webkit-transform-box: fill-box; }
+
+/* blinking (scaleY squash on the whole eye group) */
+@keyframes blink {
+  0%, 88%, 100% { transform: scaleY(1); }
+  92% { transform: scaleY(0.06); }
+  94% { transform: scaleY(1); }
+}
+.eye-group {
+  transform-origin: 50% 50%;
+  -webkit-transform-origin: 50% 50%;
+  animation: blink 4.4s infinite ease-in-out;
+}
+
+/* right eye slightly offset timing */
+.eye-right .eye-group { animation-delay: 0.22s; }
+
+/* pupil wandering (small translate) */
+@keyframes eyeMove {
+  0% { transform: translate(0,0); }
+  20% { transform: translate(2px,0); }
+  40% { transform: translate(-2px,0); }
+  60% { transform: translate(1px,1px); }
+  80% { transform: translate(-1px,-1px); }
+  100% { transform: translate(0,0); }
+}
+.pupil {
+  transform-origin: 50% 50%;
+  -webkit-transform-origin: 50% 50%;
+  animation: eyeMove 5.8s infinite ease-in-out;
+  animation-delay: 0.08s;
+}
+
+/* gentle float so it feels alive */
+@keyframes float {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+.bot-svg { animation: float 6.5s ease-in-out infinite; }
+
+/* color classes (easy to tweak) */
+.bot-frame { fill: var(--frame); }
+.bot-head-left { fill: var(--trem-blue); }
+.bot-head-right { fill: var(--trem-purple); }
+.bot-ear-left { fill: var(--trem-green); }
+.bot-ear-right { fill: var(--trem-yellow); }
+.bot-antenna-tip { fill: var(--trem-green); }
+.bot-sclera { fill: white; }
+.pupil { fill: #111; }
+.bot-mouth { stroke: var(--frame); stroke-width: 3; fill: none; stroke-linecap:round; stroke-linejoin:round; }
+
+</style>
+</head>
+<body class="leading-normal tracking-normal text-white gradient">
+
+<!-- NAV -->
+<nav class="fixed w-full z-30 top-0 text-white">
+  <div class="container mx-auto flex justify-between items-center py-4 px-6">
+    <a class="font-bold text-2xl lg:text-3xl tracking-tight" href="#">TREMENDO</a>
+    <div class="hidden lg:flex space-x-6">
+      <a href="#solutions" class="hover:underline">Solutions</a>
+      <a href="#why" class="hover:underline">Why Tremendo</a>
+      <a href="#contact" class="hover:underline">Contact</a>
+    </div>
+    <button class="bg-yellow-400 text-gray-900 font-bold px-6 py-2 rounded-full shadow-lg hover:scale-105 transition">Get Started</button>
+  </div>
+</nav>
+
+
+<!-- SERVICES -->
+<section id="solutions" class="py-20 bg-gray-900">
+  <div class="container mx-auto px-6">
+    <h2 class="text-4xl font-bold text-center mb-12">Privacy <span class="gradient-text">Policy</span></h2>
+    <div class="grid gap-12 items-center">
+      <div>
+        
+        <p class="mb-6 text-gray-300">
+
+
+
+          This Privacy Policy describes how TREMENDO ("we," "us," or "our") collects, uses, and discloses information from and about you when you use our TREMENDO application ("App").
+</p><p class="mb-6 text-gray-300">
+What Information We Collect
+</p><p class="mb-6 text-gray-300">
+We collect information to provide and improve our services to you. The types of information we collect include:
+</p><p class="mb-6 text-gray-300">
+Information you provide to us: This is information you provide directly to us, such as your name, email address, or any other information you enter or upload into the App.
+</p><p class="mb-6 text-gray-300">
+Information we collect automatically: When you use our App, we may automatically collect certain information about your device and usage. This information may include:
+</p><p class="mb-6 text-gray-300">
+Device and browser information: Such as your IP address, browser type, operating system, and unique device identifiers.
+</p><p class="mb-6 text-gray-300">
+Usage information: Such as the features you use in the App, the time, date, and duration of your activity, and other usage statistics.
+</p><p class="mb-6 text-gray-300">
+Information from third parties: We may also collect information from third-party services, such as social media platforms or other APIs, if you connect those services to our App.
+</p><p class="mb-6 text-gray-300">
+How We Use Your Information
+</p><p class="mb-6 text-gray-300">
+We use the information we collect for the following purposes:
+</p><p class="mb-6 text-gray-300">
+To provide and operate the App and its services.
+</p><p class="mb-6 text-gray-300">
+To personalize your experience and remember you for future use.
+</p><p class="mb-6 text-gray-300">
+To improve the App and develop new products and features.
+</p><p class="mb-6 text-gray-300">
+To communicate with you, including sending you promotional emails or updates if you have opted in.
+</p><p class="mb-6 text-gray-300">
+To detect and prevent fraudulent or unauthorized activity.
+</p><p class="mb-6 text-gray-300">
+How to Request Deletion of Your Data
+</p><p class="mb-6 text-gray-300">
+If you wish to request the deletion of your personal data, please send an email to <strong>contacto@tremendo.online</strong> with the subject "Data Deletion Request." We will process your request in accordance with applicable laws and our data retention policies.
+</p><p class="mb-6 text-gray-300">
+
+
+
+
+        </p>
+      </div>
+       
+    </div>
+  </div>
+</section>
+
+
+<footer class="bg-gray-800 text-gray-400 py-6 text-center">
+  © 2025 Tremendo — Business Automations with AI
+</footer>
+
+</body>
+</html>
